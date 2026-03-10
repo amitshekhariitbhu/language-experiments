@@ -36,12 +36,6 @@ If the language folder doesn't exist yet, create it.
 - JavaScript: `node javascript/<file>.js`
 - Other languages: use standard toolchain for that language.
 
-## Kotlin-specific Notes
-
-- Sealed classes, interfaces, data classes, and custom delegates must be top-level (not inside `main()`).
-- Coroutine experiments require `kotlinx-coroutines-core` on the classpath.
-- Nullable types (`Int?`) box to `java.lang.Integer` — this affects `===` identity checks.
-
 ## INSIGHTS.md Format
 
 Each insight should have:
