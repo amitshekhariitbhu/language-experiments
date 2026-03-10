@@ -119,11 +119,8 @@ Each experiment's findings are documented in `INSIGHTS.md` using this structure:
 ## Contributing
 
 1. Fork this repository.
-2. Add new experiments to an existing language folder, or create a new language folder.
-3. Run your experiments and document findings in `INSIGHTS.md`.
-4. Submit a pull request.
-
-Make sure your experiment doesn't duplicate an existing one — check the language's `INSIGHTS.md` first.
+2. Add new experiments.
+3. Submit a pull request.
 
 ## License
 
