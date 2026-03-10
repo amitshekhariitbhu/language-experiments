@@ -31,9 +31,16 @@ If the language folder doesn't exist yet, create it.
 
 ## Running Experiments
 
-- Python: `python3 python/<file>.py`
-- Kotlin: `kotlinc kotlin/<file>.kt -include-runtime -d /tmp/kt_exp.jar && java -jar /tmp/kt_exp.jar`
+- C: `gcc -std=c17 -o /tmp/c_exp c/<file>.c && /tmp/c_exp`
+- C++: `g++ -std=c++17 -o /tmp/cpp_exp cpp/<file>.cpp && /tmp/cpp_exp`
+- Go: `go run go/<file>.go`
+- Java: `javac java/<file>.java -d /tmp/java_exp && java -cp /tmp/java_exp <ClassName>`
 - JavaScript: `node javascript/<file>.js`
+- Kotlin: `kotlinc kotlin/<file>.kt -include-runtime -d /tmp/kt_exp.jar && java -jar /tmp/kt_exp.jar`
+- Python: `python3 python/<file>.py`
+- Ruby: `ruby ruby/<file>.rb`
+- Rust: `rustc rust/<file>.rs -o /tmp/rust_exp && /tmp/rust_exp`
+- Swift: `swiftc swift/<file>.swift -o /tmp/swift_exp && /tmp/swift_exp`
 - Other languages: use standard toolchain for that language.
 
 ## INSIGHTS.md Format
