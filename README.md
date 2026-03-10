@@ -23,13 +23,13 @@ The better the model, the deeper the experiments and insights.
 
 ## Adding New Experiments
 
-Open this project in [Claude Code](https://claude.ai/code) and ask:
+Open this project in [Claude Code](https://claude.ai/code) and ask the agent:
 
 - `"do a new experiment in Python"` — picks an uncovered topic automatically
 - `"new experiment in Kotlin on coroutines"` — targets a specific topic
 - `"do a new experiment in Dart"` — creates a new language folder and starts experimenting
 
-Claude Code reads existing experiments first and only creates new, non-overlapping ones. Each new experiment is run, verified, and its insights are appended to `INSIGHTS.md`.
+The agent reads existing experiments first and only creates new, non-overlapping ones. Each new experiment is run, verified, and its insights are appended to `INSIGHTS.md`.
 
 ## Structure
 
@@ -60,7 +60,7 @@ language-experiments/
 
 ### Running the Agent
 
-Ask Claude Code to run and verify experiments for you.
+Ask the agent to run and verify experiments for you.
 
 ### Running Manually
 
