@@ -29,7 +29,37 @@ Open this project in [Claude Code](https://claude.ai/code) and ask:
 
 Claude Code reads existing experiments first and only creates new, non-overlapping ones. Each new experiment is run, verified, and its insights are appended to `INSIGHTS.md`.
 
-## Running Experiments
+## Structure
+
+Each language lives in its own top-level folder:
+
+```
+language-experiments/
+├── python/
+│   ├── mutable_default_gotcha.py    <- Self-contained experiment script
+│   ├── closure_late_binding.py
+│   ├── ...
+│   └── INSIGHTS.md                  <- All findings for Python
+├── kotlin/
+│   ├── equality_and_boxing.kt
+│   ├── ...
+│   └── INSIGHTS.md
+├── javascript/
+│   ├── type_coercion_madness.js
+│   ├── ...
+│   └── INSIGHTS.md
+└── ... (c, cpp, go, java, ruby, rust, swift)
+```
+
+- **Experiment files** — Each file is standalone and runnable. Named descriptively after the behavior it demonstrates.
+- **INSIGHTS.md** — Documents every experiment's findings in a structured format: What happened, what was expected, what actually happened, and why.
+
+## Running Experiments Manually
+
+You can also ask Claude Code to run and verify all experiments for you.
+
+<details>
+<summary>Or run them manually</summary>
 
 ```bash
 # Python
@@ -63,27 +93,4 @@ ruby ruby/<file>.rb
 swiftc swift/<file>.swift -o /tmp/swift_exp && /tmp/swift_exp
 ```
 
-## Structure
-
-Each language lives in its own top-level folder:
-
-```
-language-experiments/
-├── python/
-│   ├── mutable_default_gotcha.py    <- Self-contained experiment script
-│   ├── closure_late_binding.py
-│   ├── ...
-│   └── INSIGHTS.md                  <- All findings for Python
-├── kotlin/
-│   ├── equality_and_boxing.kt
-│   ├── ...
-│   └── INSIGHTS.md
-├── javascript/
-│   ├── type_coercion_madness.js
-│   ├── ...
-│   └── INSIGHTS.md
-└── ... (c, cpp, go, java, ruby, rust, swift)
-```
-
-- **Experiment files** — Each file is standalone and runnable. Named descriptively after the behavior it demonstrates.
-- **INSIGHTS.md** — Documents every experiment's findings in a structured format: What happened, what was expected, what actually happened, and why.
+</details>
