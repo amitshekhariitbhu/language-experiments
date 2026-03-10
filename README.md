@@ -54,11 +54,9 @@ language-experiments/
 - **Experiment files** — Each file is standalone and runnable. Named descriptively after the behavior it demonstrates.
 - **INSIGHTS.md** — Documents every experiment's findings in a structured format: What happened, what was expected, what actually happened, and why.
 
-## Running Experiments Manually
+## Running Experiments
 
-You can also ask Claude Code to run and verify all experiments for you.
-
-Or run them manually:
+Ask Claude Code to run and verify experiments for you, or run them manually:
 
 ```bash
 # Python
