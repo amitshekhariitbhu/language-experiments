@@ -58,11 +58,11 @@ language-experiments/
 
 ## Running Experiments
 
-### Using Claude Code
+### Running the Agent
 
 Ask Claude Code to run and verify experiments for you.
 
-### Manually
+### Running Manually
 
 ```bash
 # Python
