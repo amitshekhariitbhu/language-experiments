@@ -8,6 +8,8 @@ Each language has its own folder with standalone experiments that reveal non-obv
 
 The better the model, the deeper the experiments and insights.
 
+> **Note:** All experiments and insights are LLM-generated. Always verify the explanations and run the experiments yourself.
+
 ## How It Works
 
 1. You ask the agent to experiment with a language (with or without a specific topic).
