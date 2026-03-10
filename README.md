@@ -16,10 +16,13 @@ This project comes with **80 experiments** across 10 languages (8 per language).
 
 To add new experiments beyond what's already here, follow the steps below.
 
-## How It Works
+## How to Add New Experiments
 
 1. Open this project in [Claude Code](https://claude.ai/code).
-2. Ask the agent to experiment with a language (with or without a specific topic).
+2. Ask the agent to experiment with a language (with or without a specific topic):
+   - `"do a new experiment in Python"` — picks an uncovered topic automatically
+   - `"new experiment in Kotlin on coroutines"` — targets a specific topic
+   - `"do a new experiment in Dart"` — creates a new language folder and starts experimenting
 3. The agent reads all existing experiments in that language folder to avoid repetition.
 4. It creates a new standalone experiment script that demonstrates a non-obvious behavior.
 5. The agent runs the experiment and verifies the output.
@@ -37,16 +40,6 @@ To add new experiments beyond what's already here, follow the steps below.
 - [Ruby](ruby/)
 - [Rust](rust/)
 - [Swift](swift/)
-
-## Adding New Experiments
-
-Open this project in [Claude Code](https://claude.ai/code) and ask the agent:
-
-- `"do a new experiment in Python"` — picks an uncovered topic automatically
-- `"new experiment in Kotlin on coroutines"` — targets a specific topic
-- `"do a new experiment in Dart"` — creates a new language folder and starts experimenting
-
-The agent reads existing experiments first and only creates new, non-overlapping ones. Each new experiment is run, verified, and its insights are appended to `INSIGHTS.md`.
 
 ## Structure
 
