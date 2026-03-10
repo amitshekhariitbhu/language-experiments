@@ -51,8 +51,9 @@ puts
 # Checking for zero
 count = 0
 puts "   Gotcha 1: Checking if count has a value"
-puts "   if count => enters the block! (count is 0, which is truthy)"
-puts "   You must use: if count && count > 0" if count
+puts "   count = 0, but 0 is truthy in Ruby!"
+puts "   if count => enters the block (unlike Python/JS where 0 is falsy)"
+puts "   To check for positive: use 'if count && count > 0'"
 puts
 
 # Empty string check

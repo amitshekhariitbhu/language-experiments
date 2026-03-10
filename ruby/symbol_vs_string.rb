@@ -44,7 +44,7 @@ b = "hello".freeze
 puts "   a.object_id => #{a.object_id}"
 puts "   b.object_id => #{b.object_id}"
 puts "   Same object? #{a.object_id == b.object_id}"
-puts "   ^ Ruby interns frozen string literals!"
+puts "   ^ Ruby may intern frozen string literals (behavior varies by version)"
 puts
 
 # --- Symbol to String and back ---

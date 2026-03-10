@@ -6,7 +6,7 @@ puts "=== Enumerable Power & Lazy Enumerators ==="
 puts
 
 # --- Infinite ranges ---
-puts "1. INFINITE RANGES (Ruby 2.6+):"
+puts "1. INFINITE RANGES (Ruby 2.7+):"
 inf_range = (1..)
 puts "   (1..) is an infinite range"
 puts "   (1..).class => #{inf_range.class}"
