@@ -58,8 +58,7 @@ language-experiments/
 
 You can also ask Claude Code to run and verify all experiments for you.
 
-<details open>
-<summary>Or run them manually</summary>
+Or run them manually:
 
 ```bash
 # Python
@@ -92,5 +91,3 @@ ruby ruby/<file>.rb
 # Swift
 swiftc swift/<file>.swift -o /tmp/swift_exp && /tmp/swift_exp
 ```
-
-</details>
