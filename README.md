@@ -103,3 +103,28 @@ ruby ruby/<file>.rb
 # Swift
 swiftc swift/<file>.swift -o /tmp/swift_exp && /tmp/swift_exp
 ```
+
+## Insight Format
+
+Each experiment's findings are documented in `INSIGHTS.md` using this structure:
+
+> **What**: Mutable default arguments are shared across function calls.
+>
+> **Expected**: Each call gets a fresh empty list.
+>
+> **Actual**: The list accumulates across calls — `['a']` → `['a', 'b']` → `['a', 'b', 'c']`.
+>
+> **Why**: Default values are evaluated once at function definition time, not per call.
+
+## Contributing
+
+1. Fork this repository.
+2. Add new experiments to an existing language folder, or create a new language folder.
+3. Run your experiments and document findings in `INSIGHTS.md`.
+4. Submit a pull request.
+
+Make sure your experiment doesn't duplicate an existing one — check the language's `INSIGHTS.md` first.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
