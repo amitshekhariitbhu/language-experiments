@@ -12,11 +12,12 @@ The better the model, the deeper the experiments and insights.
 
 ## How It Works
 
-1. You ask the agent to experiment with a language (with or without a specific topic).
-2. The agent reads all existing experiments in that language folder to avoid repetition.
-3. It creates a new standalone experiment script that demonstrates a non-obvious behavior.
-4. The agent runs the experiment and verifies the output.
-5. The findings are appended to the language's `INSIGHTS.md` in a structured format.
+1. Open this project in [Claude Code](https://claude.ai/code).
+2. Ask the agent to experiment with a language (with or without a specific topic).
+3. The agent reads all existing experiments in that language folder to avoid repetition.
+4. It creates a new standalone experiment script that demonstrates a non-obvious behavior.
+5. The agent runs the experiment and verifies the output.
+6. The findings are appended to the language's `INSIGHTS.md` in a structured format.
 
 ## Languages
 
