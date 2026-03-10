@@ -6,7 +6,7 @@ Learn programming languages by experimenting.
 
 Each language has its own folder with standalone experiments that reveal non-obvious, surprising, or unique behaviors — things that only become clear when you actually run the code.
 
-Better the model, better the experiments you will see and learn from.
+The better the model, the deeper the experiments and insights.
 
 ## Languages
 
