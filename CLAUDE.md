@@ -8,10 +8,16 @@ This is a language experimentation project. The goal is to explore programming l
 
 ## How It Works
 
-1. Check `language.txt` for the current target language.
-2. Create experiments in `<language>/` — each experiment is a standalone script.
-3. Each experiment should demonstrate something surprising, non-obvious, or unique to that language.
-4. Write findings to `<language>/INSIGHTS.md` after running experiments.
+When the user asks to do a new experiment (e.g., "do a new experiment in Python" or "new experiment in Kotlin on coroutines"):
+
+1. Read all existing experiment files and `INSIGHTS.md` in the `<language>/` folder to understand what's already covered.
+2. If the user specified a topic, create an experiment on that topic (but still avoid repeating existing insights).
+3. If no topic specified, pick a topic that is NOT already covered by existing experiments.
+4. Create the experiment as a standalone, runnable script in `<language>/`.
+5. Run the experiment and capture actual output.
+6. Append the new insight to `<language>/INSIGHTS.md`.
+
+If the language folder doesn't exist yet, create it.
 
 ## Rules for Experiments
 
@@ -21,6 +27,7 @@ This is a language experimentation project. The goal is to explore programming l
 - Every experiment must include comments explaining what's happening and why it's surprising.
 - Focus on behaviors that differ from other languages or defy common assumptions.
 - Run the experiments and capture actual output in INSIGHTS.md.
+- **Never repeat** an experiment or insight that already exists in the language folder.
 
 ## Running Experiments
 
