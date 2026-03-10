@@ -108,13 +108,13 @@ swiftc swift/<file>.swift -o /tmp/swift_exp && /tmp/swift_exp
 
 Each experiment's findings are documented in `INSIGHTS.md` using this structure:
 
-> **What**: The family emoji `👨‍👩‍👧‍👦` is a single `Character` in Swift, but is composed of 7 Unicode scalars and 25 UTF-8 bytes.
+> **What**: In JavaScript, `[] == ![]` evaluates to `true`.
 >
-> **Expected**: The emoji has a length greater than 1.
+> **Expected**: An empty array compared to its negation should be `false`.
 >
-> **Actual**: `.count` returns 1. Swift treats it as one extended grapheme cluster. Also, `"é"` written as `U+00E9` and `"e" + combining accent` are `==` equal despite different bytes.
+> **Actual**: It's `true`. `![]` coerces to `false`, then `[] == false` triggers type coercion — `[]` becomes `""`, `""` becomes `0`, `false` becomes `0`, and `0 == 0` is `true`.
 >
-> **Why**: Swift's `String` operates at the grapheme cluster level per the Unicode standard. Comparison uses canonical equivalence, so different byte representations of the same visual character are equal. This is why Swift forbids integer subscripting on strings — `.count` is O(n).
+> **Why**: JavaScript's `==` operator follows a chain of abstract equality comparisons (ToPrimitive → ToNumber), leading to non-intuitive results. This is why `===` (strict equality) is preferred.
 
 ## Contributing
 
