@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="lang-experiments-banner.svg" alt="Language Experiments" />
+  <img src="banner.png" alt="Language Experiments" />
 </p>
 
 AI Agent to deepen your understanding of programming languages through experiments.
