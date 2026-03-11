@@ -124,3 +124,22 @@ javac java/FileName.java -d /tmp/java_exp && java -cp /tmp/java_exp FileName
 **Actual**: After mutating the key's id (which changes its hashCode), get() and containsKey() both return null/false, even though size() still shows 1. The entry is stuck in the wrong hash bucket. Even creating a new key with the original hash value can't find it. Breaking the equals/hashCode contract (equals without hashCode) allows "equal" objects to coexist as separate keys. IdentityHashMap uses == instead of equals(), keeping equal objects separate.
 
 **Why**: HashMap uses hashCode() to determine the bucket at put() time. If the key's hashCode changes after insertion, the entry remains in the old bucket. get() computes the new hashCode, looks in the wrong bucket, and finds nothing. The equals/hashCode contract (JLS) requires that equal objects must have equal hashCodes; violating this breaks all hash-based collections.
+
+---
+
+## 11. Floating Point Precision (`FloatingPointPrecision.java`)
+
+**What**: Explores IEEE 754 double-precision arithmetic quirks: rounding errors, NaN semantics, signed zeros, infinities, and safe comparison techniques.
+
+**Expected**: Floating-point arithmetic is deterministic and `0.1 + 0.2` should equal `0.3`.
+
+**Actual**: Many surprising behaviors:
+- `0.1 + 0.2 = 0.30000000000000004` (not 0.3) due to binary representation limits
+- `NaN` never equals anything, including itself: `NaN == NaN` is `false`
+- `±0.0` are equal via `==`, but `1.0 / -0.0` yields negative infinity
+- `Infinity - Infinity = NaN` (indeterminate)
+- Precision loss: `10,000,000.0 + 0.1 = 10,000,000.0` (small value lost)
+- Summing `0.1` ten times yields `0.9999999999999999`, not `1.0`
+- `float` (32-bit) has ~7 decimal digits; `double` (64-bit) has ~15-16
+
+**Why**: IEEE 754 binary floating-point stores numbers as `sign × mantissa × 2^exponent`. Decimal fractions like 0.1 are repeating binary fractions, so they're rounded to the nearest representable value. These rounding errors accumulate. Special values (NaN, ±Infinity, ±0.0) have dedicated bit patterns and follow specific rules to handle edge cases like division by zero or undefined operations. The limited mantissa bits cause precision to drop dramatically when adding numbers of very different magnitudes. The spacing between consecutive representable numbers (ulp) is about 2.22×10^-16 near 1.0 for doubles.
